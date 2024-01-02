@@ -1,10 +1,10 @@
-# [Ansible role spamassassin](#spamassassin)
+# Ansible role [spamassassin](https://galaxy.ansible.com/ui/standalone/roles/buluma/spamassassin/documentation)
 
 Install and configure spamassassin on your system.
 
-|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-spamassassin/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-spamassassin/actions/workflows/molecule.yml)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-spamassassin/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-spamassassin)|[![downloads](https://img.shields.io/ansible/role/d/4840)](https://galaxy.ansible.com/buluma/spamassassin)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-spamassassin.svg)](https://github.com/buluma/ansible-role-spamassassin/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-spamassassin.svg)](https://github.com/buluma/ansible-role-spamassassin/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-spamassassin.svg)](https://github.com/buluma/ansible-role-spamassassin/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-spamassassin/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-spamassassin/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-spamassassin.svg)](https://github.com/buluma/ansible-role-spamassassin/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-spamassassin.svg)](https://github.com/buluma/ansible-role-spamassassin/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-spamassassin.svg)](https://github.com/buluma/ansible-role-spamassassin/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/spamassassin)](https://galaxy.ansible.com/ui/standalone/roles/buluma/spamassassin/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -65,13 +65,13 @@ spamassassin_user: spamd
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
-| Requirement | GitHub | GitLab |
+| Requirement | GitHub | Version |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
-|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Build Status GitHub](https://github.com/buluma/ansible-role-core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-core_dependencies)|
-|[buluma.cron](https://galaxy.ansible.com/buluma/cron)|[![Build Status GitHub](https://github.com/buluma/ansible-role-cron/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-cron/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-cron/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-cron)|
-|[buluma.logrotate](https://galaxy.ansible.com/buluma/logrotate)|[![Build Status GitHub](https://github.com/buluma/ansible-role-logrotate/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-logrotate/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-logrotate/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-logrotate)|
-|[buluma.rsyslog](https://galaxy.ansible.com/buluma/rsyslog)|[![Build Status GitHub](https://github.com/buluma/ansible-role-rsyslog/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-rsyslog/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-rsyslog/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-rsyslog)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Ansible Molecule](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-bootstrap.svg)](https://github.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Ansible Molecule](https://github.com/buluma/ansible-role-core_dependencies/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-core_dependencies.svg)](https://github.com/shadowwalker/ansible-role-core_dependencies)|
+|[buluma.cron](https://galaxy.ansible.com/buluma/cron)|[![Ansible Molecule](https://github.com/buluma/ansible-role-cron/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-cron/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-cron.svg)](https://github.com/shadowwalker/ansible-role-cron)|
+|[buluma.logrotate](https://galaxy.ansible.com/buluma/logrotate)|[![Ansible Molecule](https://github.com/buluma/ansible-role-logrotate/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-logrotate/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-logrotate.svg)](https://github.com/shadowwalker/ansible-role-logrotate)|
+|[buluma.rsyslog](https://galaxy.ansible.com/buluma/rsyslog)|[![Ansible Molecule](https://github.com/buluma/ansible-role-rsyslog/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-rsyslog/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-rsyslog.svg)](https://github.com/shadowwalker/ansible-role-rsyslog)|
 
 ## [Context](#context)
 
@@ -108,14 +108,9 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-spamassassin/blob/master/LICENSE).
+[Apache-2.0](https://github.com/buluma/ansible-role-spamassassin/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[Michael Buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-Please consider [sponsoring me](https://github.com/sponsors/buluma).
-
-### [Special Thanks](#special-thanks)
-
-Template inspired by [Robert de Bock](https://github.com/robertdebock)
