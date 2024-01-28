@@ -22,7 +22,7 @@ on:
   pull_request_target:
   schedule:
     # - cron: '37 19 19 * *'
-    - cron: '37 19 * * *'
+    - cron: '37 19 * * 1'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -51,8 +51,6 @@ jobs:
             tag: "latest"
           - image: "enterpriselinux"
             tag: "8"
-          - image: "debian-systemd"
-            tag: "latest"
           - image: "debian-systemd"
             tag: "bullseye"
           - image: "fedora-systemd"
