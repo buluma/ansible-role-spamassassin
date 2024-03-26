@@ -1,8 +1,8 @@
 ---
 - name: Prepare
   hosts: all
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: buluma.bootstrap
@@ -12,5 +12,5 @@
       logrotate_entries:
         - name: spamassassin
           path: /var/log/spamassassin
-          missingok: yes
+          missingok: true
     - role: buluma.rsyslog
