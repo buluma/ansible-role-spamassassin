@@ -72,8 +72,6 @@ jobs:
             tag: "bionic"
           - image: "docker-molecule-images"
             tag: "jammy"
-          - image: "docker-molecule-images"
-            tag: "lunar"
     steps:
       - name: Checkout Role
         uses: actions/checkout@v4
