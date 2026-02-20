@@ -1,0 +1,17 @@
+digraph PhiloDilemma {
+  label = "Michael Buluma" ;
+  overlap=false
+  {
+    "spamassassin" [fillcolor=yellow style=filled penwidth=3]
+    "buluma.bootstrap" [fillcolor=green style=filled]
+    "buluma.core_dependencies" [fillcolor=green style=filled]
+    "buluma.cron" [fillcolor=green style=filled]
+    "buluma.logrotate" [fillcolor=green style=filled]
+    "buluma.rsyslog" [fillcolor=green style=filled]
+  }
+  "spamassassin" -> "buluma.bootstrap"
+  "spamassassin" -> "buluma.core_dependencies"
+  "spamassassin" -> "buluma.cron"
+  "spamassassin" -> "buluma.logrotate"
+  "spamassassin" -> "buluma.rsyslog"
+}
