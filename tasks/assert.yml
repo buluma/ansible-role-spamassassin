@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test if spamassassin_group is set correctly
   ansible.builtin.assert:
     that:
