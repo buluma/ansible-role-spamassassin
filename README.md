@@ -11,35 +11,31 @@ Install and configure spamassassin on your system.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-spamassassin/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
----
-- name: Converge
-  hosts: all
-  become: true
+- become: true
   gather_facts: true
-
+  hosts: all
+  name: Converge
   roles:
-    - role: buluma.spamassassin
+  - role: buluma.spamassassin
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-spamassassin/blob/master/molecule/default/prepare.yml):
 
 ```yaml
----
-- name: Prepare
-  hosts: all
+- become: true
   gather_facts: false
-  become: true
-
+  hosts: all
+  name: Prepare
   roles:
-    - role: buluma.bootstrap
-    - role: buluma.core_dependencies
-    - role: buluma.cron
-    - role: buluma.logrotate
-      logrotate_entries:
-        - name: spamassassin
-          path: /var/log/spamassassin
-          missingok: true
-    - role: buluma.rsyslog
+  - role: buluma.bootstrap
+  - role: buluma.core_dependencies
+  - role: buluma.cron
+  - logrotate_entries:
+    - missingok: true
+      name: spamassassin
+      path: /var/log/spamassassin
+    role: buluma.logrotate
+  - role: buluma.rsyslog
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -49,10 +45,6 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-spamassassin/blob/master/defaults/main.yml):
 
 ```yaml
----
-# defaults file for spamassassin
-
-# What group and user spamd should run under.
 spamassassin_group: spamd
 spamassassin_user: spamd
 ```

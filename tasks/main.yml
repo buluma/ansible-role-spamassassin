@@ -1,56 +1,47 @@
 ---
-# tasks file for spamassassin
-
 - name: Import assert.yml
   ansible.builtin.import_tasks:
     file: assert.yml
-  run_once: true
   delegate_to: localhost
-
+  run_once: true
 - name: Install spamassassin
   ansible.builtin.package:
     name: "{{ spamassassin_packages }}"
     state: present
-
 - name: Create group
   ansible.builtin.group:
     name: "{{ spamassassin_group }}"
     state: present
     system: true
-
 - name: Create user
   ansible.builtin.user:
+    comment: Spamassassin user
+    group: "{{ spamassassin_group }}"
     name: "{{ spamassassin_user }}"
     state: present
-    group: "{{ spamassassin_group }}"
-    comment: Spamassassin user
     system: true
-
 - name: Configure rsyslog
   ansible.builtin.template:
-    src: spamassassin.conf.j2
     dest: /etc/rsyslog.d/spamassassin.conf
     mode: "0644"
-
+    src: spamassassin.conf.j2
 - name: Configure software
   ansible.builtin.copy:
-    src: spamassassin
     dest: /etc/default/spamassassin
     mode: "0644"
+    src: spamassassin
   when:
     - ansible_distribution == "Ubuntu"
     - ansible_distribution_release == "trusty"
-
 - name: Set permission on /var/log/spamassassin
   ansible.builtin.file:
-    path: /var/log/spamassassin
-    state: directory
-    owner: "{{ spamassassin_user }}"
     group: "{{ spamassassin_group }}"
     mode: "640"
-
+    owner: "{{ spamassassin_user }}"
+    path: /var/log/spamassassin
+    state: directory
 - name: Start and enable spamassassin
   ansible.builtin.service:
+    enabled: true
     name: "{{ spamassassin_service }}"
     state: started
-    enabled: true

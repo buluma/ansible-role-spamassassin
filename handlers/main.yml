@@ -1,6 +1,4 @@
 ---
-# handlers file for spamassassin
-
 - name: Restart spamassassin
   ansible.builtin.service:
     name: "{{ spamassassin_service }}"

@@ -1,8 +1,7 @@
----
+collections: null
 roles:
-  - name: buluma.bootstrap
-  - name: buluma.core_dependencies
-  - name: buluma.cron
-  - name: buluma.logrotate
-  - name: buluma.rsyslog
-collections:
+- name: buluma.bootstrap
+- name: buluma.core_dependencies
+- name: buluma.cron
+- name: buluma.logrotate
+- name: buluma.rsyslog
