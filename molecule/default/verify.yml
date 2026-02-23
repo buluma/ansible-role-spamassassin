@@ -1,15 +1,15 @@
 ---
-  - become: true
-    gather_facts: false
-    hosts: all
-    name: Verify
-    tasks:
-      - ansible.builtin.ping:
-        name: Check if connection still works
-      - ansible.builtin.command:
-          cmd: logrotate /etc/logrotate.d/spamassassin
-        name: Check if logrotate still works
-      - ansible.builtin.service:
-          name: rsyslog
-          state: restarted
-        name: Check if rsyslog can be restarted
+- become: true
+  gather_facts: false
+  hosts: all
+  name: Verify
+  tasks:
+  - ansible.builtin.ping:
+    name: Check if connection still works
+  - ansible.builtin.command:
+      cmd: logrotate /etc/logrotate.d/spamassassin
+    name: Check if logrotate still works
+  - ansible.builtin.service:
+      name: rsyslog
+      state: restarted
+    name: Check if rsyslog can be restarted

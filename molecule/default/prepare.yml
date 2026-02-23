@@ -1,15 +1,15 @@
 ---
-  - become: true
-    gather_facts: false
-    hosts: all
-    name: Prepare
-    roles:
-      - role: buluma.bootstrap
-      - role: buluma.core_dependencies
-      - role: buluma.cron
-      - logrotate_entries:
-          - missingok: true
-            name: spamassassin
-            path: /var/log/spamassassin
-        role: buluma.logrotate
-      - role: buluma.rsyslog
+- become: true
+  gather_facts: false
+  hosts: all
+  name: Prepare
+  roles:
+  - role: buluma.bootstrap
+  - role: buluma.core_dependencies
+  - role: buluma.cron
+  - logrotate_entries:
+    - missingok: true
+      name: spamassassin
+      path: /var/log/spamassassin
+    role: buluma.logrotate
+  - role: buluma.rsyslog
