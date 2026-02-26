@@ -1,8 +1,6 @@
----
-- name: Converge
+- become: true
+  gather_facts: true
   hosts: all
-  become: yes
-  gather_facts: yes
-
+  name: Converge
   roles:
-    - role: ansible-role-spamassassin
+  - role: buluma.spamassassin

@@ -1,5 +1,13 @@
 # Changelog
 
+## [24.3.31](https://github.com/buluma/ansible-role-spamassassin/tree/24.3.31) (2024-03-30)
+
+[Full Changelog](https://github.com/buluma/ansible-role-spamassassin/compare/0.2.0...24.3.31)
+
+## [0.2.0](https://github.com/buluma/ansible-role-spamassassin/tree/0.2.0) (2024-01-28)
+
+[Full Changelog](https://github.com/buluma/ansible-role-spamassassin/compare/0.1.1...0.2.0)
+
 ## [0.1.1](https://github.com/buluma/ansible-role-spamassassin/tree/0.1.1) (2022-04-04)
 
 [Full Changelog](https://github.com/buluma/ansible-role-spamassassin/compare/0.1.0...0.1.1)
