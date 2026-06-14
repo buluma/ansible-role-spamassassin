@@ -1,5 +1,16 @@
 # Changelog
 
+## [26.6.0](https://github.com/buluma/ansible-role-spamassassin/tree/26.6.0) (2026-06-14)
+
+[Full Changelog](https://github.com/buluma/ansible-role-spamassassin/compare/24.3.31...26.6.0)
+
+**Merged pull requests:**
+
+- Bump docker/setup-buildx-action from 3 to 4 [\#11](https://github.com/buluma/ansible-role-spamassassin/pull/11) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible/ansible-lint from 26.1.1 to 26.2.0 [\#10](https://github.com/buluma/ansible-role-spamassassin/pull/10) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 4 to 6 [\#9](https://github.com/buluma/ansible-role-spamassassin/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/molecule-action from 4.0.7 to 5.0.4 [\#6](https://github.com/buluma/ansible-role-spamassassin/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.3.31](https://github.com/buluma/ansible-role-spamassassin/tree/24.3.31) (2024-03-30)
 
 [Full Changelog](https://github.com/buluma/ansible-role-spamassassin/compare/0.2.0...24.3.31)
