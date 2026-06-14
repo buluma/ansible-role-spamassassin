@@ -1,12 +1,14 @@
 ---
 - become: true
   gather_facts: false
+- name: Verify
   hosts: all
   name: Verify
   tasks:
     - ansible.builtin.ping:
       name: Check if connection still works
     - ansible.builtin.command:
+    changed_when: false
         cmd: logrotate /etc/logrotate.d/spamassassin
       name: Check if logrotate still works
     - ansible.builtin.service:
