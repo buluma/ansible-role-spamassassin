@@ -5,4 +5,4 @@ _spamassassin_service:
   default: spamassassin
 spamassassin_packages:
   - spamassassin
-spamassassin_service: "{{ _spamassassin_service[ansible_facts.os_family] | default(_spamassassin_service['default']) }}"
+spamassassin_service: "{{ _spamassassin_service[ansible_facts['os_family']] | default(_spamassassin_service['default']) }}"
