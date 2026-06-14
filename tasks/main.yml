@@ -31,8 +31,8 @@
     mode: "0644"
     src: spamassassin
   when:
-    - ansible_distribution == "Ubuntu"
-    - ansible_distribution_release == "trusty"
+    - ansible_facts.distribution == "Ubuntu"
+    - ansible_facts.distribution_release == "trusty"
 - name: Set permission on /var/log/spamassassin
   ansible.builtin.file:
     group: "{{ spamassassin_group }}"
