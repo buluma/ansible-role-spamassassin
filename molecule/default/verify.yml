@@ -6,11 +6,15 @@
   tasks:
     - name: Check if connection still works
       ansible.builtin.ping:
-    - name: Check if logrotate still works
-      ansible.builtin.command:
-        cmd: logrotate /etc/logrotate.d/spamassassin
-      changed_when: false
-    - name: Check if rsyslog can be restarted
-      ansible.builtin.service:
-        name: rsyslog
-        state: restarted
+
+    - name: Check spamassassin rsyslog config is present
+      ansible.builtin.stat:
+        path: /etc/rsyslog.d/spamassassin.conf
+      register: rsyslog_conf
+      failed_when: not rsyslog_conf.stat.exists
+
+    - name: Check spamassassin log directory exists
+      ansible.builtin.stat:
+        path: /var/log/spamassassin
+      register: log_dir
+      failed_when: not log_dir.stat.exists

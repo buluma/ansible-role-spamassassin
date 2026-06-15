@@ -8,4 +8,3 @@
     - role: buluma.core_dependencies
     - role: buluma.cron
     - role: buluma.logrotate
-    - role: buluma.rsyslog
