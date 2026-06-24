@@ -26,4 +26,7 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: Suse
+      versions:
+        - all
   role_name: spamassassin
