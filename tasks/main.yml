@@ -4,6 +4,13 @@
     file: assert.yml
   delegate_to: localhost
   run_once: true
+- name: Ensure EPEL is installed (RedHat)
+  ansible.builtin.package:
+    name: epel-release
+    state: present
+  when:
+    - ansible_facts['os_family'] == 'RedHat'
+    - ansible_facts['distribution'] != 'Fedora'
 - name: Install spamassassin
   ansible.builtin.package:
     name: "{{ spamassassin_packages }}"
@@ -20,6 +27,11 @@
     name: "{{ spamassassin_user }}"
     state: present
     system: true
+- name: Ensure rsyslog.d directory exists
+  ansible.builtin.file:
+    path: /etc/rsyslog.d
+    state: directory
+    mode: "0755"
 - name: Configure rsyslog
   ansible.builtin.template:
     dest: /etc/rsyslog.d/spamassassin.conf
